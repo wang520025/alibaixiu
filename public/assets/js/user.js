@@ -81,6 +81,23 @@ $.ajax({
 		$('#userBox').html(html);
 	}
 });
+// 小西老师的方法（获取用户列表）开始
+	/* function loadUser(){
+		$.ajax({
+			type: 'get',
+			url: '/users',
+			success: function (response) {
+				// console.log(response)
+				// 使用模板引擎将数据和HTML字符串进行拼接
+				var html = template('userTpl', { data: response });
+				// 将拼接好的字符串显示在页面中
+				$('#userBox').html(html);
+			}
+		});
+	} */
+	// 然后把 location.reload()刷新页面 换成 loadUser() 重新渲染页面
+// 小西老师的方法（获取用户列表）结束
+
 // 通过事件委托的方式为编辑按钮添加点击事件
 $('#userBox').on('click', '.edit', function () {
     // 获取被点击用户的id值

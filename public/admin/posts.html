@@ -104,6 +104,7 @@
   <script src="../assets/vendors/jquery/jquery.js"></script>
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script src="../assets/vendors/art-template/template-web.js"></script>
+  <script src="../assets/js/common.js"></script>
   <!-- 文章列表数据模板 -->
   <script type="text/html" id="postsTpl">
     {{each records}}
@@ -114,8 +115,8 @@
       <td class="text-center">{{$imports.formateDate($value.createAt)}}</td>
       <td class="text-center">{{['未发布','已发布'][$value.state]}}</td>
       <td class="text-center">
-        <a href="javascript:;" class="btn btn-default btn-xs">编辑</a>
-        <a href="javascript:;" class="btn btn-danger btn-xs">删除</a>
+        <a href="post-add.html?id={{$value._id}}" class="btn btn-default btn-xs">编辑</a>
+        <a href="javascript:;" class="btn btn-danger btn-xs delete" data-id="{{$value._id}}">删除</a>
       </td>
     </tr>
     {{/each}}
