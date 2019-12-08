@@ -1,6 +1,11 @@
+<script src="/login/status"></script>
+  <script>
+    if (!isLogin) {
+      location.href = '/admin/login.html'
+    }
+  </script>
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
   <meta charset="utf-8">
   <title>Dashboard &laquo; Admin</title>
@@ -8,12 +13,7 @@
   <link rel="stylesheet" href="../assets/vendors/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" href="../assets/vendors/nprogress/nprogress.css">
   <link rel="stylesheet" href="../assets/css/admin.css">
-  <script src="/login/status"></script>
-  <script>
-    if (!isLogin) {
-      location.href = '/admin/login.html'
-    }
-  </script>
+  
   <script src="../assets/vendors/nprogress/nprogress.js"></script>
 </head>
 
@@ -92,7 +92,9 @@
   <script src="../assets/vendors/jquery/jquery.js"></script>
   <script src="../assets/vendors/bootstrap/js/bootstrap.js"></script>
   <script>NProgress.done()</script>
+  <script src="../assets/vendors/art-template/template-web.js"></script>
   <script src="/assets/js/common.js"></script>
+  <script src=""></script>
   <script src="../assets/js/index.js"></script>
 </body>
 

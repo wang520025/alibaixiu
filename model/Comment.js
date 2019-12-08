@@ -39,13 +39,13 @@ const CommentSchema = new Schema({
 // 创建分类集合
 const Comment = mongoose.model('Comment', CommentSchema);
 // 自己加的开始
-Comment.create({
-	content:'水浒传的评论',
-	author:'5de78c17099ebd2f7cd33e72',
-	post:'5de9c749dc74ee21acf3973e'
-}).then(x =>{
-	console.log('评论插入成功');
-})
+// Comment.create({
+// 	content:'水浒传的评论',
+// 	author:'5de78c17099ebd2f7cd33e72',
+// 	post:'5de9c749dc74ee21acf3973e'
+// }).then(x =>{
+// 	console.log('评论插入成功');
+// })
 // 自己加的结束
 // 文章分类格式校验（路由级别）
 const validateComment = comment => {

@@ -21,8 +21,25 @@ $('#logout').on('click', function () {
 // 	date = new Date(date);
 // 	return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
 // };
+// var template = require('template');
 template.defaults.imports.formateDate = function(date) {
 	// 将日期时间字符串转换成日期对象
 	date = new Date(date);
 	return date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate()
 }
+// 小西老师封装时间格式化开始
+// template.defaults.imports.dateformat = function(d){
+//   return d.slice(0,10);
+// }
+// 小西老师封装时间格式化结束
+
+// 向服务器端发送请求 索要登录用户信息
+$.ajax({
+  type: 'get',
+  url: '/users/' + userId,
+  success: function (response) {
+    // console.log(response);
+    $('.avatar').attr('src', response.avatar)
+    $('.profile .name').html(response.nickName)
+  }
+})

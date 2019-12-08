@@ -1,3 +1,9 @@
+<script src="/login/status"></script>
+  <script>
+    if (!isLogin) {
+      location.href = '/admin/login.html'
+    }
+  </script>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -112,7 +118,7 @@
       <td>{{$value.title}}</td>
       <td>{{$value.author.nickName}}</td>
       <td>{{$value.category.title}}</td>
-      <td class="text-center">{{$imports.formateDate($value.createAt)}}</td>
+      <td class="text-center">{{formateDate($value.createAt)}}</td>
       <td class="text-center">{{['未发布','已发布'][$value.state]}}</td>
       <td class="text-center">
         <a href="post-add.html?id={{$value._id}}" class="btn btn-default btn-xs">编辑</a>
