@@ -10,3 +10,12 @@ $.ajax({
 		$('#listBox').html(html);
 	}
 });
+// 根据分类id获取分类信息
+$.ajax({
+	type: 'get',
+	url: '/categories/'+ categoryId,
+	success: function (response) {
+        // console.log(response);
+		$('#categoryTitle').html(response.title)
+	}
+})
