@@ -7,7 +7,7 @@ $.ajax({
 	type: 'get',
 	url: '/posts/' + postId,
 	success: function (response) {
-        // console.log(response);
+        console.log(response);
         var html = template('postTpl', response);
         // console.log(html);
 		$('#article').html(html)
