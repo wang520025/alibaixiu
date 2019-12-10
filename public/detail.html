@@ -51,9 +51,8 @@
       </div>
     </div>
     <div class="content">
-      <div class="article" id="article">
-        
-      </div>
+      <div class="article" id="article"></div>
+      <div id="comment"></div>
       <div class="panel hots">
         <h3>热门推荐</h3>
         <ul id="recommendBox">
@@ -88,6 +87,32 @@
         <a href="javascript:;" id="like">赞</a>
       </div>
       {{content}}
+  </script>
+    <!-- 评论模板 -->
+  <script type="text/html" id="commentTpl">
+      <style type="text/css">
+        .comment {
+          margin-bottom: 20px;
+        }
+        .comment textarea{
+          box-sizing: border-box;
+          padding: 10px;
+          width: 100%;
+          height: 80px;
+          display: block;
+        }
+        .comment input {
+          width: 100px;
+          height: 30px;
+          margin-top: 10px;
+        }
+      </style>
+      <div class="comment">
+        <form>
+          <textarea></textarea>
+          <input type="submit" value="提交评论">
+        </form>
+      </div>
   </script>
   <script src="assets/js/public.js"></script>
   <script src="assets/js/recommend.js"></script>

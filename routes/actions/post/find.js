@@ -6,6 +6,7 @@ const pagination  = require('mongoose-sex-page');
 const _ = require('lodash');
 
 module.exports = async (req, res) => {
+	// console.log("ok")
 	// 当前页
 	let page = +req.query.page;
 	// 如果页码没有传递

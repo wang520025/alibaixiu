@@ -6,8 +6,8 @@ $.ajax({
 	type: 'get',
 	url: '/posts/search/' + key,
 	success: function (response) {
-        console.log(response);
-		// var html = template('searchTpl', {data: response});
-		// $('#listBox').html(html);
+        // console.log(response);
+		var html = template('searchTpl', {data: response});
+		$('#listBox').html(html);
 	}
 })
